@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "homepage": "https://.github.io/ecommerce-app"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
