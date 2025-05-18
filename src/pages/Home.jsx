@@ -34,10 +34,10 @@ export default function Home() {
 
       {/* Latest Products */}
       <section className="mb-12">
-<h3 className="text-xl font-bold mb-4 mt-10 flex items-center gap-2 text-gray-800">
-  <span className="text-2xl">🔥</span>
-  <span>Latest Products</span>
-</h3>
+        <h3 className="text-xl font-bold mb-4 mt-10 flex items-center gap-2 text-gray-800">
+          <span className="text-2xl">🔥</span>
+          <span>Latest Products</span>
+        </h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {allCombinedProducts.slice(0, 4).map((product) => (
             <Link
@@ -51,7 +51,7 @@ export default function Home() {
             >
               <div className="h-40 overflow-hidden rounded-md mb-3">
                 <img
-                  src={`/${product.image}`}
+                  src={`${import.meta.env.BASE_URL}${product.image}`}
                   alt={product.name || product.title}
                   className="w-full h-full object-contain rounded transition duration-300 transform hover:scale-105 hover:brightness-105"
                 />
@@ -90,7 +90,7 @@ export default function Home() {
               >
                 <div className="w-full h-36 overflow-hidden rounded-xl mb-3">
                   <img
-                    src={`/${item.image}`}
+                    src={`${import.meta.env.BASE_URL}${item.image}`}
                     alt={item.name || item.title}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                   />
@@ -136,7 +136,7 @@ export default function Home() {
           {[1, 2, 3, 4].map((b) => (
             <img
               key={b}
-              src={`/brand${b}.jpg`}
+              src={`${import.meta.env.BASE_URL}brand${b}.jpg`}
               alt={`Brand ${b}`}
               className="h-12 grayscale hover:grayscale-0 transition rounded"
             />

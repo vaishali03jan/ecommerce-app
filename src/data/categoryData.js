@@ -1,23 +1,26 @@
+const base = import.meta.env.BASE_URL;
+
 const categoryData = [
   {
     name: "Electronics",
     slug: "electronics",
-    image: "/categories/electronics.jpg", // ✅ from /public
+    image: `${base}categories/electronics.jpg`,
   },
   {
     name: "Clothing",
     slug: "clothing",
-    image: "/categories/clothing.jpg",
+    image: `${base}categories/clothing.jpg`,
   },
   {
     name: "Footwear",
     slug: "footwear",
-    image: "/categories/footwear.jpg",
+    image: `${base}categories/footwear.jpg`,
   },
   {
     name: "Home Decor",
     slug: "home-decor",
-    image: "/categories/home-decor.jpg",
+    image: `${base}categories/home-decor.jpg`,
   },
 ];
+
 export default categoryData;

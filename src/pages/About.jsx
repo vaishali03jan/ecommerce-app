@@ -10,7 +10,7 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <img
-            src="/about-illustration.png"
+          src={`${import.meta.env.BASE_URL}about-illustration.png`}
             alt="About Illustration"
             className="rounded-lg shadow-md"
           />

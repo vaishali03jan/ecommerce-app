@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL;
+
 const allProducts = [
   {
     id: 1,
@@ -6,8 +8,8 @@ const allProducts = [
     price: 799,
     category: "clothing",
     slug: "classic-white-tee",
-    image: "Product1.jpg",
-    rating: 4.0 
+    image: `${base}Product1.jpg`,
+    rating: 4.0
   },
   {
     id: 2,
@@ -16,8 +18,8 @@ const allProducts = [
     price: 999,
     category: "clothing",
     slug: "graphic-streetwear-tee",
-    image: "Product2.jpg",
-    rating: 5.0 
+    image: `${base}Product2.jpg`,
+    rating: 5.0
   },
   {
     id: 3,
@@ -26,8 +28,8 @@ const allProducts = [
     price: 899,
     category: "clothing",
     slug: "minimalist-black-tee",
-    image: "Product3.jpg",
-    rating: 3.3 
+    image: `${base}Product3.jpg`,
+    rating: 3.3
   },
   {
     id: 4,
@@ -36,8 +38,8 @@ const allProducts = [
     price: 1099,
     category: "clothing",
     slug: "retro-vintage-tee",
-    image: "Product4.jpg",
-    rating: 4.3 
+    image: `${base}Product4.jpg`,
+    rating: 4.3
   },
   {
     id: 5,
@@ -46,8 +48,8 @@ const allProducts = [
     price: 1199,
     category: "clothing",
     slug: "oversized-fit-tee",
-    image: "Product5.jpg",
-    rating: 5.0 
+    image: `${base}Product5.jpg`,
+    rating: 5.0
   },
   {
     id: 6,
@@ -56,8 +58,8 @@ const allProducts = [
     price: 999,
     category: "clothing",
     slug: "tie-dye-chill-tee",
-    image: "Product6.jpg",
-    rating: 3.3 
+    image: `${base}Product6.jpg`,
+    rating: 3.3
   },
   {
     id: 7,
@@ -66,8 +68,8 @@ const allProducts = [
     price: 1299,
     category: "clothing",
     slug: "athleisure-dry-fit-tee",
-    image: "Product7.jpg",
-    rating: 4.0 
+    image: `${base}Product7.jpg`,
+    rating: 4.0
   },
   {
     id: 8,
@@ -76,93 +78,99 @@ const allProducts = [
     price: 899,
     category: "clothing",
     slug: "earth-tone-basic-tee",
-    image: "Product8.jpg",
-    rating: 5.0 
+    image: `${base}Product8.jpg`,
+    rating: 5.0
   },
-    {
+  {
     id: 9,
     name: "Apple MacBook Air Laptop",
-    description: "Apple M1 chip, 13.3-inch/33.74 cm Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID",
+    description: "Apple M1 chip, 13.3-inch Retina Display, 8GB RAM, 256GB SSD.",
     price: 60990,
     category: "electronics",
     slug: "apple-macbook-air-laptop",
-    image: "electronic1.jpg",
+    image: `${base}electronic1.jpg`,
     rating: 4.6
   },
-    {
+  {
     id: 10,
     name: "ASUS TUF Gaming A15",
-    description: "AMD Ryzen 7 7435HS Mobile Processor 3.1GHz (20MB Cache, up to 4.5 GHz, 8 cores, 16 Threads).",
+    description: "AMD Ryzen 7, 16 Threads, 8 Cores Gaming Beast.",
     price: 86990,
     category: "electronics",
     slug: "asus-tuf-gaming-a15",
-    image: "electronic2.jpg",
+    image: `${base}electronic2.jpg`,
     rating: 3.5
   },
-    {  id: 11,
-    name: "Dell (Smartchoice) Inspiron 3530",
-    description: "Thin & Light Laptop 13th Gen Intel Core i5-1334U Processor,16GB, 1TB SSD, 15.6 , (39.62cm) FHD Display, Backlit KB, Windows 11 + MSO'24 & 15 Month.",
+  {
+    id: 11,
+    name: "Dell Inspiron 3530",
+    description: "13th Gen Intel Core i5, 1TB SSD, 16GB RAM.",
     price: 58790,
     category: "electronics",
     slug: "Dell-Inspiron-3530",
-    image: "electronic3.jpg",
+    image: `${base}electronic3.jpg`,
     rating: 4.5
   },
-  {   id: 12,
+  {
+    id: 12,
     name: "HP Victus",
-    description: "13th Gen Intel Core i5-13420H, 6GB RTX 4050 Gaming Laptop (16GB DDR4, 512GB SSD) 144Hz, IPS, 15.6 /39.6cm, Flicker-Free, Win 11, Office 21, Mica Silver, 2.29kg, Enhanced Cooling, fa1279TX",
+    description: "i5, RTX 4050, 144Hz IPS, Win11, Office21.",
     price: 72990,
     category: "electronics",
     slug: "hp-victus",
-    image: "electronic4.jpg",
+    image: `${base}electronic4.jpg`,
     rating: 4.0
   },
-  {  id: 13,
+  {
+    id: 13,
     name: "Lenovo LOQ 2024",
-    description: "Intel Core i5-13450HX, 13th Gen, NVIDIA RTX 4050-6GB, 16GB RAM, 512GB SSD, FHD 144Hz, 15.6 /39.6cm, Windows 11, MS Office 21, Grey, 2.4Kg, 83DV007GIN, 1Yr ADP Free Gaming Laptop",
+    description: "i5 13th Gen, RTX 4050, 16GB/512GB SSD, Win11.",
     price: 86990,
     category: "electronics",
     slug: "lenovo-loq-2024",
-    image: "electronic5.jpg",
+    image: `${base}electronic5.jpg`,
     rating: 4.1
   },
-    {   id: 14,
-    name: "Acer Predator Helios 16 AI Gaming Laptop",
-    description: '14th Gen Intel Core i9 Processor (32 GB RAM/1 TB SSD/NVIDIA GeForce RTX 4080/240Hz/Wifi 7/Win11 Home) PH16-72 with 40.64 cm (16") WQXGA IPS Display, 2.65 KG',
+  {
+    id: 14,
+    name: "Acer Predator Helios 16 AI",
+    description: "i9, 32GB RAM, RTX 4080, WQXGA IPS, Win11.",
     price: 234000,
     category: "electronics",
     slug: "acer-predator-helios-16-ai-gaming-laptop",
-    image: "electronic6.jpg",
+    image: `${base}electronic6.jpg`,
     rating: 5.0
   },
-    {   id: 15,
+  {
+    id: 15,
     name: "MSI Thin 15",
-    description: 'Intel Core i5-13420H, 40CM FHD 144Hz Gaming Laptop(8GB/512GB NVMe SSD/Windows 11 Home/NVIDIA GeForce RTX 2050,GDDR6 4GB /Cosmos Gray/1.86Kg), B13UCX-1808IN',
+    description: "i5-13420H, RTX 2050, 512GB SSD.",
     price: 56990,
     category: "electronics",
     slug: "msi-thin-15",
-    image: "electronic7.jpg",
+    image: `${base}electronic7.jpg`,
     rating: 3.3
   },
-    {   id: 16,
+  {
+    id: 16,
     name: "Acer ALG",
-    description: "Intel Core i7-13th Gen 13620H Processor, NVIDIA GeForce RTX 3050-6GB(16GB/512GB) FHD, 39.62cm(15.6), 144Hz, Windows 11 Home, Steel Gray, 1.99KG, AL15G-53, Premium Metal Body,Gaming Laptop",
+    description: "i7-13620H, RTX 3050, 144Hz, Win11.",
     price: 72990,
     category: "electronics",
     slug: "acer-alg",
-    image: "electronic8.jpg",
+    image: `${base}electronic8.jpg`,
     rating: 3.6
   },
-    {   id: 17,
+  {
+    id: 17,
     name: "Acer Nitro V",
-    description: 'Intel Core i5- 13th Gen 13420H processor, NVIDIA GeForce RTX 4050-6 GB GDDR6(16GB DDR5/512GB)IPS FHD, 39.62cm(15.6"), 165 Hz, Win 11 Home,Obsidian black, 2.113 kg, ANV15-51,Gaming Laptop',
+    description: "i5 13th Gen, RTX 4050, 165Hz, Obsidian Black.",
     price: 74999,
     category: "electronics",
     slug: "acer-nitro-v",
-    image: "electronic9.jpg",
+    image: `${base}electronic9.jpg`,
     rating: 4.0
-  },
-
+  }
 ];
 
 export default allProducts;

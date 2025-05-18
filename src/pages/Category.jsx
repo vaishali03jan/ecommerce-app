@@ -6,10 +6,8 @@ import { phoneData } from "../data/phoneData";
 export default function Category() {
   const { name } = useParams();
 
-  // Combine all products
   const allItems = [...allProducts, ...phoneData];
 
-  // Filter by category
   const filtered = allItems.filter(
     (item) => item.category?.toLowerCase() === name.toLowerCase()
   );
@@ -34,11 +32,11 @@ export default function Category() {
               className="border rounded-xl p-4 bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-transform duration-300"
             >
               <img
-                src={`/${product.image}`}
+                src={`${import.meta.env.BASE_URL}${product.image}`}
                 alt={product.name || product.title}
                 className="w-full h-48 object-contain mb-3"
                 onError={(e) =>
-                  (e.target.src = "https://via.placeholder.com/150")
+                  (e.target.src = `${import.meta.env.BASE_URL}fallback.png`)
                 }
               />
 

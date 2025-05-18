@@ -79,7 +79,7 @@ export default function SearchPage() {
                 <td className="p-3 text-center">{index + 1}</td>
                 <td className="p-3">
                   <img
-                    src={`/${p.image}`}
+                    src={`${import.meta.env.BASE_URL}${p.image}`}
                     alt={p.name}
                     className="w-20 rounded"
                   />

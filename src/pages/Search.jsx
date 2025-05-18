@@ -44,7 +44,7 @@ export default function Search() {
             >
               <div className="h-36 mb-3 overflow-hidden rounded">
                 <img
-                  src={`/${product.image}`}
+                  src={`${import.meta.env.BASE_URL}${product.image}`}
                   alt={product.title || product.name}
                   className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                 />

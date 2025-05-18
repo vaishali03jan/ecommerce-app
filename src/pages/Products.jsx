@@ -14,11 +14,6 @@ export default function Products() {
 
   const maxPriceLimit = 1000000; // 10 lakh
 
-  // const maxPriceLimit =
-  // categoryFilter === "electronics" || categoryFilter === "phone"
-  //   ? 150000
-  //   : 10000;
-
   const allItems = [...allProducts, ...phoneData];
   const uniqueCategories = [...new Set(allItems.map((p) => p.category))];
 
@@ -52,7 +47,6 @@ export default function Products() {
     <div className="flex max-w-7xl mx-auto p-4 gap-6">
       {/* Sidebar */}
       <aside className="w-64 border rounded p-4 shadow space-y-6 bg-white">
-        {/* Category Filter */}
         <div>
           <label className="font-semibold block mb-1">Category</label>
           <select
@@ -69,7 +63,6 @@ export default function Products() {
           </select>
         </div>
 
-        {/* Price Filter */}
         <div>
           <label className="font-semibold block mb-1">
             Max Price: ₹{priceRange.toLocaleString()}
@@ -82,14 +75,13 @@ export default function Products() {
             type="range"
             min="0"
             max={maxPriceLimit}
-            step="1000" // ✅ Keep step bigger for smoother movement
+            step="1000"
             value={priceRange}
             onChange={(e) => setPriceRange(Number(e.target.value))}
             className="w-full"
           />
         </div>
 
-        {/* Sort Filter */}
         <div>
           <label className="font-semibold block mb-1">Sort By</label>
           <select
@@ -104,7 +96,6 @@ export default function Products() {
           </select>
         </div>
 
-        {/* Search Box */}
         <div>
           <label className="font-semibold block mb-1">Search</label>
           <input
@@ -137,7 +128,7 @@ export default function Products() {
                   <Link to={`/product/${product.slug}`} className="mb-3 block">
                     <div className="h-40 overflow-hidden rounded mb-2 bg-gray-50 flex items-center justify-center">
                       <img
-                        src={`/${product.image}`}
+                        src={`${import.meta.env.BASE_URL}${product.image}`}
                         onError={(e) => (e.target.src = "/fallback.png")}
                         alt={product.name}
                         className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
@@ -154,7 +145,6 @@ export default function Products() {
                     </p>
                   </Link>
 
-                  {/* Rating Stars */}
                   <div className="flex items-center mb-3 text-yellow-500 text-sm">
                     {[...Array(5)].map((_, i) => (
                       <i
@@ -166,7 +156,6 @@ export default function Products() {
                     ))}
                   </div>
 
-                  {/* Add to Cart / View Details */}
                   {isClothing ? (
                     <Link
                       to={`/product/${product.slug}`}

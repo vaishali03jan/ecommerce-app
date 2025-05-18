@@ -22,7 +22,9 @@ export default function ProductFilters({
               key={cat}
               onClick={() => onCategoryChange(cat)}
               className={`cursor-pointer px-3 py-1 rounded border ${
-                selectedCategory === cat ? "bg-blue-600 text-white" : "hover:bg-gray-100"
+                selectedCategory === cat
+                  ? "bg-blue-600 text-white"
+                  : "hover:bg-gray-100"
               }`}
             >
               {cat}
@@ -37,15 +39,15 @@ export default function ProductFilters({
         <input
           type="range"
           min="0"
-          max="5000"
-          step="100"
+          max="1000000" // 🔧 Updated to allow higher priced products
+          step="1000"
           value={priceRange}
           onChange={(e) => onPriceChange(Number(e.target.value))}
           className="w-full"
         />
         <div className="flex justify-between text-sm mt-1">
           <span>₹0</span>
-          <span>₹{priceRange}</span>
+          <span>₹{priceRange.toLocaleString()}</span>
         </div>
       </div>
 

@@ -20,7 +20,7 @@ export default function CategoryList() {
             <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 overflow-hidden">
               <div className="h-44 overflow-hidden">
                 <img
-                  src={cat.image}
+                  src={`${import.meta.env.BASE_URL}${cat.image}`}
                   alt={cat.name}
                   className="w-full h-full object-cover"
                 />
@@ -40,6 +40,3 @@ export default function CategoryList() {
     </section>
   );
 }
-
-
-

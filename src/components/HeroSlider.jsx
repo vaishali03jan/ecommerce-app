@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-const images = ["/Banner1.jpg", "/Banner2.jpg", "/Banner4.jpg"];
+const images = [
+  `${import.meta.env.BASE_URL}Banner1.jpg`,
+  `${import.meta.env.BASE_URL}Banner2.jpg`,
+  `${import.meta.env.BASE_URL}Banner4.jpg`,
+];
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
@@ -8,7 +12,7 @@ export default function HeroSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 3000); // Slide every 3 sec
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 

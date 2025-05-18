@@ -12,13 +12,12 @@ export default function SmartphoneDeals() {
 
     const interval = setInterval(() => {
       const cardWidth = container.children[0]?.offsetWidth || 240;
-      const gap = 24; // Tailwind's gap-6 = 1.5rem = 24px
+      const gap = 24; // Tailwind's gap-6 = 24px
       const scrollAmount = cardWidth + gap;
 
       let newIndex = currentIndex + 1;
-
       if (newIndex > phoneData.length - 5) {
-        newIndex = 0; // Reset to start
+        newIndex = 0;
       }
 
       container.scrollTo({
@@ -27,7 +26,7 @@ export default function SmartphoneDeals() {
       });
 
       setCurrentIndex(newIndex);
-    }, 2000); // 2 seconds
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [currentIndex]);
@@ -50,9 +49,9 @@ export default function SmartphoneDeals() {
           >
             <div className="w-full h-44 flex items-center justify-center mb-3 bg-gray-50 rounded-lg overflow-hidden">
               <img
-                src={phone.image}
+                src={`${import.meta.env.BASE_URL}${phone.image}`}
                 alt={phone.title}
-                onError={(e) => (e.target.src = "/fallback.png")}
+                onError={(e) => (e.target.src = `${import.meta.env.BASE_URL}fallback.png`)}
                 className="max-h-full object-contain hover:scale-105 transition-transform duration-300"
               />
             </div>

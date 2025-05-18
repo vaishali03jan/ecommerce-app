@@ -15,24 +15,26 @@ export function CartProvider({ children }) {
   }, [cart]);
 
   const addToCart = (product) => {
-const item = {
-  id: product.id,
-  name: product.name || product.title || "Untitled Product",
-  image: product.image || "placeholder.png",
-  price: product.price || 0,
-  quantity: product.quantity || 1,
-  size: product.size || null,
-  category: product.category || null, // ✅ Add this line
-};
+    const base = import.meta.env.BASE_URL;
+
+    const item = {
+      id: product.id,
+      name: product.name || product.title || "Untitled Product",
+      image: product.image?.startsWith("http")
+        ? product.image
+        : `${base}${product.image || "fallback.png"}`, // ✅ fix path
+      price: product.price || 0,
+      quantity: product.quantity || 1,
+      size: product.size || null,
+      category: product.category || null,
+    };
 
     setCart((prev) => {
-      // Check if same product with same size exists
       const existingItemIndex = prev.findIndex(
         (p) => p.id === item.id && p.size === item.size
       );
 
       if (existingItemIndex >= 0) {
-        // Increase quantity of existing item
         const updated = [...prev];
         updated[existingItemIndex].quantity += item.quantity;
         toast.success(
@@ -55,7 +57,9 @@ const item = {
   const clearCart = () => setCart([]);
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, clearCart }}
+    >
       {children}
     </CartContext.Provider>
   );

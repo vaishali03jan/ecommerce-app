@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import { Outlet } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import './index.css';
+import './app.css';
 
 // Toastify imports
 import { ToastContainer } from 'react-toastify';
