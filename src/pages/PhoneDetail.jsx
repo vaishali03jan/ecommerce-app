@@ -39,7 +39,7 @@ const PhoneDetail = () => {
       <div className="flex flex-col md:flex-row gap-12">
         <div className="flex-1 bg-white border rounded-xl p-6 shadow-sm">
           <img
-            src={`/ecommerce-app/${product.image}`}
+            src={product.image}
             alt={product.title}
             className="w-full h-[400px] object-contain"
           />

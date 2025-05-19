@@ -41,7 +41,7 @@ export default function ProductView() {
         {/* Product Image */}
         <div className="overflow-hidden border rounded-lg shadow-sm">
           <img
-            src={`${import.meta.env.BASE_URL}${product.image}`}
+            src={product.image}
             alt={product.name}
             className="w-full h-80 object-contain transition-transform duration-300 hover:scale-105"
           />
