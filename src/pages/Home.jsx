@@ -90,7 +90,7 @@ export default function Home() {
               >
                 <div className="w-full h-36 overflow-hidden rounded-xl mb-3">
                   <img
-                    src={`${import.meta.env.BASE_URL}${item.image}`}
+                    src={item.image}
                     alt={item.name || item.title}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                   />
