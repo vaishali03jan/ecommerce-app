@@ -115,7 +115,8 @@ export default function ProductView() {
               className="block border rounded-lg p-4 bg-white shadow hover:shadow-md transition-transform hover:-translate-y-1"
             >
               <img
-                src={`${import.meta.env.BASE_URL}${related.image}`}
+                src={`related.image`}
+                onError={(e) => (e.target.src = "/fallback.png")}
                 alt={related.name}
                 className="w-full h-32 object-contain mb-2"
               />

@@ -1,6 +1,5 @@
-const base = import.meta.env.BASE_URL.endsWith('/')
-  ? import.meta.env.BASE_URL.slice(0, -1)
-  : import.meta.env.BASE_URL;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith("/") ? rawBase.slice(0, -1) : rawBase;
 
 export const phoneData = [
   {

@@ -128,7 +128,7 @@ const PhoneDetail = () => {
               className="bg-white border rounded-xl p-4 hover:shadow-md transition"
             >
               <img
-                src={`/ecommerce-app/${item.image}`}
+                src={item.image}
                 alt={item.title}
                 className="w-full h-40 object-contain mb-3"
               />
