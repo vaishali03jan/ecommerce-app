@@ -89,7 +89,7 @@ const allProducts = [
     price: 60990,
     category: "electronics",
     slug: "apple-macbook-air-laptop",
-    image: `${base}/electronic1.jpg`,
+    image: `/electronic1.jpg`,
     rating: 4.6
   },
   {
@@ -99,7 +99,7 @@ const allProducts = [
     price: 86990,
     category: "electronics",
     slug: "asus-tuf-gaming-a15",
-    image: `${base}/electronic2.jpg`,
+    image: `/electronic2.jpg`,
     rating: 3.5
   },
   {
@@ -109,7 +109,7 @@ const allProducts = [
     price: 58790,
     category: "electronics",
     slug: "Dell-Inspiron-3530",
-    image: `${base}/electronic3.jpg`,
+    image: `/electronic3.jpg`,
     rating: 4.5
   },
   {
@@ -119,7 +119,7 @@ const allProducts = [
     price: 72990,
     category: "electronics",
     slug: "hp-victus",
-    image: `${base}/electronic4.jpg`,
+    image: `/electronic4.jpg`,
     rating: 4.0
   },
   {
@@ -129,7 +129,7 @@ const allProducts = [
     price: 86990,
     category: "electronics",
     slug: "lenovo-loq-2024",
-    image: `${base}/electronic5.jpg`,
+    image: `/electronic5.jpg`,
     rating: 4.1
   },
   {
@@ -139,7 +139,7 @@ const allProducts = [
     price: 234000,
     category: "electronics",
     slug: "acer-predator-helios-16-ai-gaming-laptop",
-    image: `${base}/electronic6.jpg`,
+    image: `/electronic6.jpg`,
     rating: 5.0
   },
   {
@@ -149,7 +149,7 @@ const allProducts = [
     price: 56990,
     category: "electronics",
     slug: "msi-thin-15",
-    image: `${base}/electronic7.jpg`,
+    image: `/electronic7.jpg`,
     rating: 3.3
   },
   {
@@ -159,7 +159,7 @@ const allProducts = [
     price: 72990,
     category: "electronics",
     slug: "acer-alg",
-    image: `${base}/electronic8.jpg`,
+    image: `/electronic8.jpg`,
     rating: 3.6
   },
   {
@@ -169,7 +169,7 @@ const allProducts = [
     price: 74999,
     category: "electronics",
     slug: "acer-nitro-v",
-    image: `${base}/electronic9.jpg`,
+    image: `/electronic9.jpg`,
     rating: 4.0
   }
 ];
