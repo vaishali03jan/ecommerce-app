@@ -8,6 +8,7 @@ import { ChevronDown } from "lucide-react";
 export default function Navbar() {
   const { cart } = useCart();
   const cartCount = cart.length;
+  const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
@@ -101,7 +102,7 @@ export default function Navbar() {
           </form>
         </nav>
 
-        {/* Cart */}
+        {/* Cart & Hamburger */}
         <div className="flex items-center gap-3">
           <Link
             to="/cart"
@@ -129,6 +130,85 @@ export default function Navbar() {
               )}
             </div>
             <span>Cart</span>
+          </Link>
+
+          {/* Hamburger */}
+          <button
+            className="md:hidden focus:outline-none"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <svg
+              className="w-6 h-6 text-gray-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {isOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Dropdown */}
+      <div
+        className={`md:hidden bg-white shadow-inner px-4 overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-96 py-3 opacity-100" : "max-h-0 py-0 opacity-0"
+        }`}
+      >
+        <div className="space-y-2 text-sm font-medium text-gray-700">
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className="block hover:text-blue-600"
+          >
+            Home
+          </Link>
+          <Link
+            to="/products"
+            onClick={() => setIsOpen(false)}
+            className="block hover:text-blue-600"
+          >
+            Products
+          </Link>
+          <Link
+            to="/about"
+            onClick={() => setIsOpen(false)}
+            className="block hover:text-blue-600"
+          >
+            About
+          </Link>
+          <Link
+            to="/contact"
+            onClick={() => setIsOpen(false)}
+            className="block hover:text-blue-600"
+          >
+            Contact
+          </Link>
+          <Link
+            to="/cart"
+            onClick={() => setIsOpen(false)}
+            className="block hover:text-blue-600 relative"
+          >
+            Cart
+            {cartCount > 0 && (
+              <span className="ml-1 bg-red-600 text-white text-xs w-5 h-5 inline-flex items-center justify-center rounded-full">
+                {cartCount}
+              </span>
+            )}
           </Link>
         </div>
       </div>

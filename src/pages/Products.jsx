@@ -12,7 +12,7 @@ export default function Products() {
   const [searchQuery, setSearchQuery] = useState("");
   const [priceRange, setPriceRange] = useState(150000);
 
-  const maxPriceLimit = 1000000; // 10 lakh
+  const maxPriceLimit = 1000000;
 
   const allItems = [...allProducts, ...phoneData];
   const uniqueCategories = [...new Set(allItems.map((p) => p.category))];
@@ -44,9 +44,9 @@ export default function Products() {
   }
 
   return (
-    <div className="flex max-w-7xl mx-auto p-4 gap-6">
+    <div className="flex flex-col md:flex-row max-w-7xl mx-auto p-4 gap-6">
       {/* Sidebar */}
-      <aside className="w-64 border rounded p-4 shadow space-y-6 bg-white">
+      <aside className="w-full md:w-64 border rounded p-4 shadow space-y-6 bg-white">
         <div>
           <label className="font-semibold block mb-1">Category</label>
           <select
@@ -109,13 +109,13 @@ export default function Products() {
       </aside>
 
       {/* Product Grid */}
-      <main className="flex-1">
+      <main className="flex-1 min-w-0">
         <h1 className="text-2xl font-bold mb-4">🛍 All Products</h1>
 
         {filteredProducts.length === 0 ? (
           <p className="text-gray-500">No products found.</p>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filteredProducts.map((product) => {
               const rating = Number(product.rating) || 0;
               const isClothing = product.category === "clothing";
@@ -126,7 +126,7 @@ export default function Products() {
                   className="border rounded-xl p-4 bg-white shadow-sm hover:shadow-md transition-transform hover:-translate-y-1 flex flex-col"
                 >
                   <Link to={`/product/${product.slug}`} className="mb-3 block">
-                    <div className="h-40 overflow-hidden rounded mb-2 bg-gray-50 flex items-center justify-center">
+                    <div className="h-40 min-w-[120px] overflow-hidden rounded mb-2 bg-gray-50 flex items-center justify-center">
                       <img
                         src={product.image}
                         onError={(e) => (e.target.src = "/fallback.png")}
@@ -134,7 +134,7 @@ export default function Products() {
                         className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
                       />
                     </div>
-                    <h4 className="text-base font-semibold text-gray-800 hover:underline">
+                    <h4 className="text-base font-semibold text-gray-800 hover:underline line-clamp-1">
                       {product.name}
                     </h4>
                     <p className="text-sm text-gray-600 mt-1 line-clamp-2">
