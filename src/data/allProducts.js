@@ -1,5 +1,5 @@
-// const rawBase = import.meta.env.BASE_URL;
-// const base = rawBase.endsWith("/") ? rawBase.slice(0, -1) : rawBase;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith("/") ? rawBase.slice(0, -1) : rawBase;
 
 const allProducts = [
   {
@@ -9,7 +9,7 @@ const allProducts = [
     price: 799,
     category: "clothing",
     slug: "classic-white-tee",
-    image: `Product1.jpg`,
+    image: `${base}/Product1.jpg`,
     rating: 4.0
   },
   {
@@ -19,7 +19,7 @@ const allProducts = [
     price: 999,
     category: "clothing",
     slug: "graphic-streetwear-tee",
-    image: `Product2.jpg`,
+    image: `${base}/Product2.jpg`,
     rating: 5.0
   },
   {
@@ -29,7 +29,7 @@ const allProducts = [
     price: 899,
     category: "clothing",
     slug: "minimalist-black-tee",
-    image: `Product3.jpg`,
+    image: `${base}/Product3.jpg`,
     rating: 3.3
   },
   {
@@ -39,7 +39,7 @@ const allProducts = [
     price: 1099,
     category: "clothing",
     slug: "retro-vintage-tee",
-    image: `Product4.jpg`,
+    image: `${base}/Product4.jpg`,
     rating: 4.3
   },
   {
@@ -49,7 +49,7 @@ const allProducts = [
     price: 1199,
     category: "clothing",
     slug: "oversized-fit-tee",
-    image: `Product5.jpg`,
+    image: `${base}/Product5.jpg`,
     rating: 5.0
   },
   {
@@ -59,7 +59,7 @@ const allProducts = [
     price: 999,
     category: "clothing",
     slug: "tie-dye-chill-tee",
-    image: `Product6.jpg`,
+    image: `${base}/Product6.jpg`,
     rating: 3.3
   },
   {
@@ -69,7 +69,7 @@ const allProducts = [
     price: 1299,
     category: "clothing",
     slug: "athleisure-dry-fit-tee",
-    image: `Product7.jpg`,
+    image: `${base}/Product7.jpg`,
     rating: 4.0
   },
   {
@@ -79,7 +79,7 @@ const allProducts = [
     price: 899,
     category: "clothing",
     slug: "earth-tone-basic-tee",
-    image: `Product8.jpg`,
+    image: `${base}/Product8.jpg`,
     rating: 5.0
   },
   {
@@ -89,7 +89,7 @@ const allProducts = [
     price: 60990,
     category: "electronics",
     slug: "apple-macbook-air-laptop",
-    image: `/electronic1.jpg`,
+    image: `${base}/electronic1.jpg`,
     rating: 4.6
   },
   {
@@ -99,7 +99,7 @@ const allProducts = [
     price: 86990,
     category: "electronics",
     slug: "asus-tuf-gaming-a15",
-    image: `/electronic2.jpg`,
+    image: `${base}/electronic2.jpg`,
     rating: 3.5
   },
   {
@@ -109,7 +109,7 @@ const allProducts = [
     price: 58790,
     category: "electronics",
     slug: "Dell-Inspiron-3530",
-    image: `/electronic3.jpg`,
+    image: `${base}/electronic3.jpg`,
     rating: 4.5
   },
   {
@@ -119,7 +119,7 @@ const allProducts = [
     price: 72990,
     category: "electronics",
     slug: "hp-victus",
-    image: `/electronic4.jpg`,
+    image: `${base}/electronic4.jpg`,
     rating: 4.0
   },
   {
@@ -129,7 +129,7 @@ const allProducts = [
     price: 86990,
     category: "electronics",
     slug: "lenovo-loq-2024",
-    image: `/electronic5.jpg`,
+    image: `${base}/electronic5.jpg`,
     rating: 4.1
   },
   {
@@ -139,7 +139,7 @@ const allProducts = [
     price: 234000,
     category: "electronics",
     slug: "acer-predator-helios-16-ai-gaming-laptop",
-    image: `/electronic6.jpg`,
+    image: `${base}/electronic6.jpg`,
     rating: 5.0
   },
   {
@@ -149,7 +149,7 @@ const allProducts = [
     price: 56990,
     category: "electronics",
     slug: "msi-thin-15",
-    image: `/electronic7.jpg`,
+    image: `${base}/electronic7.jpg`,
     rating: 3.3
   },
   {
@@ -159,7 +159,7 @@ const allProducts = [
     price: 72990,
     category: "electronics",
     slug: "acer-alg",
-    image: `/electronic8.jpg`,
+    image: `${base}/electronic8.jpg`,
     rating: 3.6
   },
   {
@@ -169,7 +169,7 @@ const allProducts = [
     price: 74999,
     category: "electronics",
     slug: "acer-nitro-v",
-    image: `/electronic9.jpg`,
+    image: `${base}/electronic9.jpg`,
     rating: 4.0
   }
 ];
