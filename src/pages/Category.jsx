@@ -32,7 +32,7 @@ export default function Category() {
               className="border rounded-xl p-4 bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-transform duration-300"
             >
               <img
-                src={`${import.meta.env.BASE_URL}${product.image}`}
+                src={product.image}
                 alt={product.name || product.title}
                 className="w-full h-48 object-contain mb-3"
                 onError={(e) =>
