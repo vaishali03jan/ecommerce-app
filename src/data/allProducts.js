@@ -1,4 +1,4 @@
-const base = "https://vaishali03jan.github.io/ecommerce-app/";
+const base = "/ecommerce-app/";
 
 const allProducts = [
   {
