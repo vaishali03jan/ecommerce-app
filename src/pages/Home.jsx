@@ -51,7 +51,7 @@ export default function Home() {
             >
               <div className="h-40 overflow-hidden rounded-md mb-3">
                 <img
-                  src={`${import.meta.env.BASE_URL}${product.image}`}
+                  src={product.image}
                   alt={product.name || product.title}
                   className="w-full h-full object-contain rounded transition duration-300 transform hover:scale-105 hover:brightness-105"
                 />
