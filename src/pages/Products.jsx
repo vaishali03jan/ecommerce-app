@@ -128,7 +128,7 @@ export default function Products() {
                   <Link to={`/product/${product.slug}`} className="mb-3 block">
                     <div className="h-40 overflow-hidden rounded mb-2 bg-gray-50 flex items-center justify-center">
                       <img
-                        src={`${import.meta.env.BASE_URL}${product.image}`}
+                        src={product.image}
                         onError={(e) => (e.target.src = "/fallback.png")}
                         alt={product.name}
                         className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
