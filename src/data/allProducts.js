@@ -1,4 +1,4 @@
-const base = import.meta.env.BASE_URL;
+const base = "https://vaishali03jan.github.io/ecommerce-app/";
 
 const allProducts = [
   {
