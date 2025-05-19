@@ -49,7 +49,7 @@ export default function SmartphoneDeals() {
           >
             <div className="w-full h-44 flex items-center justify-center mb-3 bg-gray-50 rounded-lg overflow-hidden">
               <img
-                src={`${import.meta.env.BASE_URL}${phone.image}`}
+                src={phone.image}
                 alt={phone.title}
                 onError={(e) => (e.target.src = `${import.meta.env.BASE_URL}fallback.png`)}
                 className="max-h-full object-contain hover:scale-105 transition-transform duration-300"
