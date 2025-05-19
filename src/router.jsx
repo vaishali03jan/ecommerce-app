@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import App from "./App";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
@@ -15,32 +15,27 @@ import ProductView from "./pages/ProductView";
 import CategoryList from "./components/CategoryList";
 import SearchPage from "./pages/SearchPage";
 
-const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <App />,
-      children: [
-        { index: true, element: <Home /> },
-        { path: "products", element: <Products /> },
-        { path: "product/:slug", element: <ProductDetail /> },
-        { path: "category/:name", element: <Category /> },
-        { path: "cart", element: <Cart /> },
-        { path: "checkout", element: <Checkout /> },
-        { path: "order-confirmation", element: <OrderConfirmation /> },
-        { path: "about", element: <About /> },
-        { path: "contact", element: <Contact /> },
-        { path: "", element: <SmartphoneDeals /> },
-        { path: "phones/:slug", element: <PhoneDetail /> },
-        { path: "product-view/:id", element: <ProductView /> },
-        { path: "categories", element: <CategoryList /> },
-        { path: "search", element: <SearchPage /> },
-      ],
-    },
-  ],
+const router = createHashRouter([
   {
-    basename: "/ecommerce-app", // ✅ Must match vite.config.js base
-  }
-);
+    path: "/",
+    element: <App />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "products", element: <Products /> },
+      { path: "product/:slug", element: <ProductDetail /> },
+      { path: "category/:name", element: <Category /> },
+      { path: "cart", element: <Cart /> },
+      { path: "checkout", element: <Checkout /> },
+      { path: "order-confirmation", element: <OrderConfirmation /> },
+      { path: "about", element: <About /> },
+      { path: "contact", element: <Contact /> },
+      { path: "", element: <SmartphoneDeals /> },
+      { path: "phones/:slug", element: <PhoneDetail /> },
+      { path: "product-view/:id", element: <ProductView /> },
+      { path: "categories", element: <CategoryList /> },
+      { path: "search", element: <SearchPage /> },
+    ],
+  },
+]);
 
 export default router;

@@ -8,7 +8,7 @@ import router from './router';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <CartProvider>
-      <RouterProvider router={router} /> {/* ✅ NO BrowserRouter here */}
+      <RouterProvider router={router} />
     </CartProvider>
   </React.StrictMode>
 );
