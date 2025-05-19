@@ -36,7 +36,7 @@ export default function ProductDetail() {
     <div className="p-6 max-w-6xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
         <img
-          src={`${import.meta.env.BASE_URL}${product.image}`}
+          src={product.image}
           alt={product.name || product.title}
           className="w-full max-w-sm object-contain mx-auto"
         />
@@ -141,7 +141,7 @@ export default function ProductDetail() {
             <Link to={`/product/${rel.slug}`} key={rel.slug}>
               <div className="border rounded-lg p-4 hover:shadow transition">
                 <img
-                  src={`${import.meta.env.BASE_URL}${rel.image}`}
+                  src={rel.image}
                   alt={rel.name || rel.title}
                   className="w-full h-32 object-contain mb-2"
                 />
