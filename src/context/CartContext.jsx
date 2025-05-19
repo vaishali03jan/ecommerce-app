@@ -22,7 +22,7 @@ export function CartProvider({ children }) {
       name: product.name || product.title || "Untitled Product",
       image: product.image?.startsWith("http")
         ? product.image
-        : `${base}${product.image || "fallback.png"}`, // ✅ fix path
+        : `${product.image}`, // ✅ fix path
       price: product.price || 0,
       quantity: product.quantity || 1,
       size: product.size || null,
