@@ -25,7 +25,7 @@ export default function Cart() {
               className="border p-4 rounded shadow-sm flex items-center gap-4"
             >
               <img
-                src={`${import.meta.env.BASE_URL}${item.image || "fallback.png"}`}
+                src={item.image || `${import.meta.env.BASE_URL}fallback.png`}
                 onError={(e) => {
                   e.target.onerror = null;
                   e.target.src = `${import.meta.env.BASE_URL}fallback.png`;
