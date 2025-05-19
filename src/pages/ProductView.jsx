@@ -41,7 +41,7 @@ export default function ProductView() {
         {/* Product Image */}
         <div className="overflow-hidden border rounded-lg shadow-sm">
           <img
-            src={`${import.meta.env.BASE_URL}${product.image}`}
+            src={product.image}
             alt={product.name}
             className="w-full h-80 object-contain transition-transform duration-300 hover:scale-105"
           />
@@ -115,7 +115,7 @@ export default function ProductView() {
               className="block border rounded-lg p-4 bg-white shadow hover:shadow-md transition-transform hover:-translate-y-1"
             >
               <img
-                src={`${import.meta.env.BASE_URL}${related.image}`}
+                src={related.image}
                 alt={related.name}
                 className="w-full h-32 object-contain mb-2"
               />
